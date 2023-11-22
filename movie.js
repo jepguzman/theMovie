@@ -1,3 +1,5 @@
+let urlImg = 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'
+
 const options = {
     method: 'GET',
     headers: {
@@ -6,7 +8,7 @@ const options = {
     }
   };
   
-  fetch('https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=es-MX&page=1&sort_by=popularity.desc', options)
+  fetch('https://api.themoviedb.org/3/discover/movie?include_adult=true&include_video=false&language=es-MX&page=1&sort_by=popularity.desc', options)
     .then(response => response.json())
     .then(response => console.log(response))
     .catch(err => console.error(err));
